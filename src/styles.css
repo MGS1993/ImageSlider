@@ -26,11 +26,15 @@ body {
     top: 15%;
 }
     .slide {
-        position: relative;
+        position: absolute;
         top: 5%;
         height: 90%;
         width: 80%;
-        margin: 0 auto;
+        left: 10%;
+        transition: none;
+        opacity: 0;
+        
+        
     }
     .slideImage {
         position: relative;
@@ -39,7 +43,17 @@ body {
         margin-right: auto;
         display: block;
     }
-
+    .outGoingSlide {
+        visibility: hidden;
+        transform:translate(-400px);
+        opacity: 0;
+    }
+    .inComingSlide {
+        visibility: visible;
+        /* transform: translate(); */
+        opacity: 1;
+    }
+    
 #controls {
     position: relative;
     height: 19%;
@@ -62,9 +76,11 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.35s;
 }
     .arrows:hover {
         opacity: 100%;
+        
     }
 
 #leftArrow {

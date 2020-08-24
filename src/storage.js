@@ -1,1 +1,1 @@
-export const slides = document.getElementsByClassName('slideImage')
+export const slides = document.getElementsByClassName("slideImage");
