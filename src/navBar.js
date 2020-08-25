@@ -1,5 +1,4 @@
 import { 
-  displayed,
   slideContainers,
  } from './functionality';
 
@@ -7,13 +6,7 @@ import {
  export let navButtons = document.getElementsByClassName('navButtons');
  let nav = document.getElementById('nav');
 
-  console.log(slideContainers);
-  // console.log(nav)
-
-
-
-
- function createNav() {
+export function createNav() {
   sliderIndexes.forEach((element, index) => {
     element = document.createElement('div');
     element.className = "navButtons";
@@ -22,17 +15,4 @@ import {
     
   })
  }
-
-//   function navFunctionality(displayed) {
-//     console.log()
-//   }
-// navFunctionality();
- createNav();
-//  console.log(navButtons)
  
-
-// Array.from(navButtons).forEach((element, index) => {
-//   element.id = sliderIndexes[index]
-// })
-///////TRY TO MAKE A FUNCTION THAT TURNS THE CIRCLES A COLOR WHEN 'DISPLAYED' IS TRIGGERED IN 
-///////FUNCTIONALITY

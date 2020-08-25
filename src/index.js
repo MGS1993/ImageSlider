@@ -1,5 +1,5 @@
 import "./styles.css";
-import "./navBar";
+import { createNav } from './navBar';
 import {
   rightArrow,
   leftArrow,
@@ -8,6 +8,7 @@ import {
   showDisplayOnLoad,
 } from "./functionality";
 
+createNav();
 showDisplayOnLoad();
 rightArrow.addEventListener("click", showDisplayToRight);
 leftArrow.addEventListener("click", showDisplayToLeft);

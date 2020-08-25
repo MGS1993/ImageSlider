@@ -70,13 +70,17 @@ body {
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
+    visibility: hidden;
+    
 }
     .navButtons {
-        height: 20px;
-        width: 20px;
+        height: 16px;
+        width: 16px;
         border-radius: 35px;
-        border: 1px solid black;
-       
+        border: 1px solid #242424;
+        transition: ease-in .2s;
+        margin: 0 0.2vw;
+        
     }
 
 

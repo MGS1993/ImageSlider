@@ -1,4 +1,4 @@
-import { navButtons } from './navBar'
+import { navButtons, } from "./navBar";
 let i = 0;
 export let rightArrow = document.getElementById("rightArrow");
 export let leftArrow = document.getElementById("leftArrow");
@@ -6,7 +6,7 @@ let frame = document.getElementById("frame");
 export let slideContainers = frame.getElementsByTagName("div");
 let albumLength = slideContainers.length - 1;
 export let displayed;
-let navCircle
+let navCircle;
 function clearI() {
   i = 0;
 }
@@ -22,20 +22,18 @@ function modifyI(target) {
   i = target;
 }
 
-
 function setDisplayed(target) {
-
-  displayed = target.id.replace(/-/g, '_');
+  displayed = target.id.replace(/-/g, "_");
   navCircle = Array.from(navButtons);
   navCircle.forEach((element) => {
     if (displayed == element.id) {
-      element.style = "background: blue"
+      element.style = "background: aqua";
     } else if (displayed != element.id) {
       element.style = "background: grey";
     } else {
-      console.log("failed")
+      console.log("failed");
     }
-  })
+  });
 }
 
 export function showDisplayOnLoad() {
@@ -43,6 +41,7 @@ export function showDisplayOnLoad() {
 }
 
 export function showDisplayToRight() {
+  nav.style = "visibility: visible";
   if (i >= slideContainers.length - 1) {
     slideContainers[i].style =
       "visibility: hidden; transition: .5s ease-out; transform:translate(-400px); opacity: 0;"; //0
@@ -50,17 +49,15 @@ export function showDisplayToRight() {
     slideContainers[i].style =
       "visibility: visible; transition: opacity .5s; opacity: 1;";
     setDisplayed(slideContainers[i]);
-    
   } else if (i == 0) {
     slideContainers[i].style =
       "visibility: hidden; transition: .5s ease-out; transform:translate(-400px); opacity: 0;"; //0
-      
+
     addI();
     slideContainers[i].style =
       "visibility: visible; transition: opacity .5s; opacity: 1;";
 
     setDisplayed(slideContainers[i]);
-    
   } else {
     slideContainers[i].style =
       "visibility: hidden; transition: .5s ease-out; transform:translate(-400px); opacity: 0;"; //0
@@ -69,12 +66,11 @@ export function showDisplayToRight() {
       "visibility: visible; transition: opacity .5s; opacity: 1;";
 
     setDisplayed(slideContainers[i]);
-    
   }
-  
 }
 
 export function showDisplayToLeft() {
+  nav.style = "visibility: visible";
   if (i >= slideContainers.length) {
     slideContainers[albumLength].style =
       "visibility: hidden; transition: .5s ease-out; transform:translate(400px); opacity: 0;";
@@ -95,5 +91,3 @@ export function showDisplayToLeft() {
     setDisplayed(slideContainers[i]);
   }
 }
-
-
