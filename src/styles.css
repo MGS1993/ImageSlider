@@ -62,12 +62,23 @@ body {
 }
 
 #nav {
-    position: relative;
-    width: 70%;
-    height: 15%;
-    top: 100%;
-    margin: 0 auto;
+    position: absolute;
+    width: 45%;
+    height: 5%;
+    left: 27.5%;
+    right:27.5%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
 }
+    .navButtons {
+        height: 20px;
+        width: 20px;
+        border-radius: 35px;
+        border: 1px solid black;
+       
+    }
+
 
 .arrows {
     opacity: 60%;

@@ -1,4 +1,5 @@
 import "./styles.css";
+import "./navBar";
 import {
   rightArrow,
   leftArrow,
