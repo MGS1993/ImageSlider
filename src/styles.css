@@ -10,6 +10,20 @@ body {
     background-color: rgb(48, 47, 47);
 }
 
+#dropDown:hover {
+    opacity: 100% !important;
+}
+
+.extendedDD {
+    position: relative;
+    visibility: hidden;
+    display: inline-block;
+    width: 200%;
+    height: 100%;
+    border: 1px solid black;
+    background: gray;
+}
+
 #backDrop {
     position: relative;
     height: 80vh;
@@ -80,7 +94,13 @@ body {
         border: 1px solid #242424;
         transition: ease-in .2s;
         margin: 0 0.2vw;
-        
+        cursor: pointer;
+    }
+    .navButtons:hover {
+        border: 1px solid aqua;
+    }
+    .navButtons:active {
+        background: aqua;
     }
 
 
@@ -95,7 +115,7 @@ body {
 }
     .arrows:hover {
         opacity: 100%;
-        
+        cursor: pointer;
     }
 
 #leftArrow {

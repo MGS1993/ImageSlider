@@ -1,5 +1,5 @@
-import { navButtons, } from "./navBar";
-let i = 0;
+import { navButtons, buttonArray } from "./navBar";
+export let i = 0;
 export let rightArrow = document.getElementById("rightArrow");
 export let leftArrow = document.getElementById("leftArrow");
 let frame = document.getElementById("frame");
@@ -18,11 +18,11 @@ function subtractI() {
   i--;
 }
 
-function modifyI(target) {
+export function modifyI(target) {
   i = target;
 }
 
-function setDisplayed(target) {
+export function setDisplayed(target) {
   displayed = target.id.replace(/-/g, "_");
   navCircle = Array.from(navButtons);
   navCircle.forEach((element) => {
@@ -67,6 +67,7 @@ export function showDisplayToRight() {
 
     setDisplayed(slideContainers[i]);
   }
+  console.log(i);
 }
 
 export function showDisplayToLeft() {
@@ -90,4 +91,6 @@ export function showDisplayToLeft() {
       "visibility: visible; transition: opacity .5s; opacity: 1;";
     setDisplayed(slideContainers[i]);
   }
+  
 }
+

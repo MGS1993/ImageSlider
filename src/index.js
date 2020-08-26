@@ -1,12 +1,16 @@
 import "./styles.css";
-import { createNav } from './navBar';
+import "./dropDown";
+import { 
+  createNav,
+} from './navBar';
+
 import {
   rightArrow,
   leftArrow,
   showDisplayToRight,
   showDisplayToLeft,
   showDisplayOnLoad,
-} from "./functionality";
+} from "./slideShow";
 
 createNav();
 showDisplayOnLoad();
