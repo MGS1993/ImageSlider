@@ -93,4 +93,7 @@ export function showDisplayToLeft() {
   }
   
 }
-
+export function setAutoScroll() {
+  showDisplayToRight();
+  setTimeout(setAutoScroll, 5000)
+}
